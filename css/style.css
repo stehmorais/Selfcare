@@ -1,13 +1,19 @@
+@import url("https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,400;0,700;1,400&display=swap");
 * {
   padding: 0px;
   margin: 0px;
   box-sizing: border-box;
 }
 
+hr {
+  border: 0.2px solid #e9e8e8;
+}
+
 .container {
   min-height: 100vh;
   display: flex;
   flex-direction: column;
+  font-family: "Lato", sans-serif;
 }
 
 .cabecalho {
@@ -21,7 +27,7 @@
 .cabecalho-left {
   display: flex;
   align-items: center;
-  margin-left: 10px;
+  margin-left: 40px;
   gap: 6px;
 }
 .cabecalho-left img {
@@ -34,10 +40,10 @@
 .cabecalho-right {
   display: flex;
   align-items: center;
-  margin-right: 10px;
+  margin-right: 30px;
   gap: 25px;
 }
-.cabecalho-right img {
+.cabecalho-right .icon {
   width: 18px;
 }
 
@@ -45,6 +51,23 @@
   flex: 1 0 auto;
   display: flex;
   flex-direction: column;
+}
+
+.banner-container img {
+  width: 100%;
+}
+
+.card-container {
+  display: grid;
+}
+
+.paragraphs {
+  display: flex;
+  justify-content: space-between;
+}
+.paragraphs p {
+  font-weight: 400;
+  margin: 20px 50px 20px 50px;
 }
 
 /*# sourceMappingURL=style.css.map */
