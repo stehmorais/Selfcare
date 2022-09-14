@@ -37,6 +37,16 @@ hr {
   color: #161616;
 }
 
+.banner-container img {
+  width: 100%;
+}
+
+.paragraphs {
+  display: flex;
+  padding: 20px 30px 20px 30px;
+  justify-content: space-between;
+}
+
 .cabecalho-right {
   display: flex;
   margin-right: 30px;
@@ -44,6 +54,45 @@ hr {
 }
 .cabecalho-right .icon {
   width: 18px;
+}
+
+.galeria {
+  display: flex;
+  flex-wrap: wrap;
+  padding: 20px;
+  margin: 30px;
+  gap: 50px 200px;
+}
+
+.card-img {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 250px;
+  height: 230px;
+}
+.card-img img {
+  width: 100%;
+  height: 100%;
+  border-radius: 5px;
+  margin-bottom: 10px;
+}
+
+.card-text p {
+  margin: 5px;
+  font-weight: 700;
+}
+.card-text .description {
+  color: #161616;
+}
+.card-text .price {
+  color: #5CA720;
+}
+.card-text span {
+  font-size: 13px;
+  color: #161616;
+  margin-right: 5px;
 }
 
 .rodape-up {
@@ -96,6 +145,12 @@ hr {
 }
 .logo-pag.visa {
   margin-bottom: 15px;
+}
+
+@media (max-width: 850px) {
+  .galeria {
+    gap: 50px;
+  }
 }
 
 /*# sourceMappingURL=style.css.map */
