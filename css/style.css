@@ -17,16 +17,16 @@ hr {
 }
 
 .cabecalho {
-  flex-basis: 100%;
+  width: 100%;
   padding: 15px;
   display: flex;
   flex-direction: row;
   justify-content: space-between;
+  align-items: center;
 }
 
 .cabecalho-left {
   display: flex;
-  align-items: center;
   margin-left: 40px;
   gap: 6px;
 }
@@ -39,7 +39,6 @@ hr {
 
 .cabecalho-right {
   display: flex;
-  align-items: center;
   margin-right: 30px;
   gap: 25px;
 }
@@ -47,27 +46,56 @@ hr {
   width: 18px;
 }
 
-.content-main {
-  flex: 1 0 auto;
-  display: flex;
-  flex-direction: column;
-}
-
-.banner-container img {
-  width: 100%;
-}
-
-.card-container {
-  display: grid;
-}
-
-.paragraphs {
+.rodape-up {
   display: flex;
   justify-content: space-between;
+  align-items: center;
+  padding: 30px;
+  font-weight: 600;
+  color: #161616;
 }
-.paragraphs p {
-  font-weight: 400;
-  margin: 20px 50px 20px 50px;
+
+.email-rodape input {
+  width: 300px;
+  height: 50px;
+  margin-top: 10px;
+  text-align: center;
+  border: 1px solid #D9D9D9;
+}
+
+.email {
+  border-radius: 5px 0px 0px 5px;
+}
+
+.button {
+  background-color: #5CA720;
+  border-radius: 0px 5px 5px 0px;
+}
+
+.rodape-down {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 30px;
+  font-weight: 600;
+  color: #161616;
+}
+.rodape-down img {
+  margin: 10px;
+}
+
+.logo-rede {
+  width: 33px;
+}
+
+.logo-pag {
+  width: 50px;
+}
+.logo-pag.paypal {
+  width: 30px;
+}
+.logo-pag.visa {
+  margin-bottom: 15px;
 }
 
 /*# sourceMappingURL=style.css.map */
