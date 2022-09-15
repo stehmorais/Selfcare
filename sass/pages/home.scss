@@ -16,7 +16,6 @@ hr {
 }
 
 .cabecalho {
-    width: 100%;
     padding: 15px;
     display: flex;
     flex-direction: row;
@@ -28,6 +27,7 @@ hr {
     display: flex;
     margin-left: 40px;
     gap: 6px;
+    animation: fromRight 0.7s backwards;
 
     img {
         width: 15px;
@@ -38,45 +38,69 @@ hr {
     }
 }
 
-.banner-container{
-    img{
-        width: 100%;
-    }
-}
-
-.paragraphs{
-    display: flex;
-    padding: 20px 30px 20px 30px;
-    justify-content: space-between;
-}
-
 .cabecalho-right {
     display: flex;
     margin-right: 30px;
     gap: 25px;
+    animation: fromRight 0.7s backwards;
 
-    .icon {
+    img {
         width: 18px;
+        cursor: pointer;
+        transition: transform 0.5s;
+
+        &:hover {
+            transform: scale(1.1);
+        }
     }
 }
 
-.galeria{
-    display: flex;
-    flex-wrap: wrap;
-    padding: 20px;
-    margin: 30px;
-    gap: 50px 200px;
+.banner-container {
+    img {
+        width: 100%;
+    }
 }
 
-.card-img{
+.paragraphs {
+    display: flex;
+    padding: 20px 40px;
+    justify-content: space-between;
+    animation: fromRight 0.7s backwards;
+}
+
+.text {
+    transition: 0.4s;
+    cursor: pointer;
+
+    &:hover {
+        color: #D9D9D9;
+    }
+}
+
+.galeria {
+    display: flex;
+    flex-wrap: wrap;
+    margin: 40px;
+    gap: 50px 240px;
+}
+
+.card-item {
     display: flex;
     flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    width: 250px;
+    animation: fromBottom 0.8s backwards;
+    transition: transform 0.5s;
+    cursor: pointer;
+
+    &:hover {
+        transform: scale(1.1);
+    }
+}
+
+.card-img {
+    width: 230px;
     height: 230px;
 
-    img{
+    img {
         width: 100%;
         height: 100%;
         border-radius: 5px;
@@ -84,40 +108,30 @@ hr {
     }
 }
 
-.card-text{
-    p{
-        margin: 5px;
-        font-weight: 700;   
-    }
+.description {
+    font-weight: 500;
+    color: $secondary-color;
+    margin: 5px;
+}
 
-    .description{
-        color: $secondary-color;
-    }
+.price {
+    font-weight: 700;
+    color: $primary-color;
+    margin: 5px;
 
-    .price{
-        color: $primary-color;
-    }
-
-    span{
+    span {
         font-size: 13px;
         color: $secondary-color;
         margin-right: 5px;
     }
 }
 
-
-
-.rodape-up{
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 30px;
-    font-weight: 600;
-    color: $secondary-color;
+.rodape-up {
+    @include text-rodape(flex, space-between, center, 30px, 600, $secondary-color);
 }
 
-.email-rodape{
-    input{
+.email-rodape {
+    input {
         width: 300px;
         height: 50px;
         margin-top: 10px;
@@ -125,45 +139,76 @@ hr {
         border: 1px solid #D9D9D9;
     }
 }
-.email{
+
+.email {
     border-radius: 5px 0px 0px 5px;
 }
-.button{
+
+.button {
     background-color: $primary-color;
     border-radius: 0px 5px 5px 0px;
+    transition: 0.5s;
+    cursor: pointer;
+
+    &:hover {
+        background-color: #7fc745;
+    }
 }
 
-.rodape-down{
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 30px;
-    font-weight: 600;
-    color: $secondary-color;
+.rodape-down {
+    @include text-rodape(flex, space-between, center, 30px, 600, $secondary-color);
 
-    img{
+    img {
         margin: 10px;
     }
 }
 
-.logo-rede{
+.logo-rede {
     width: 33px;
+    transition: transform 0.5s;
+    cursor: pointer;
+
+    &:hover {
+        transform: scale(1.1);
+    }
 }
 
-.logo-pag{
+.logo-pag {
     width: 50px;
+    transition: transform 0.5s;
+    cursor: pointer;
 
-    &.paypal{
-        width: 30px;
+    &:hover {
+        transform: scale(1.1);
     }
 
-    &.visa{
-        margin-bottom: 15px;
+}
+
+.paypal {
+    width: 30px;
+}
+
+
+@keyframes fromRight {
+    0% {
+        opacity: 0;
+        transform: translateX(-30px);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateX(0);
     }
 }
 
-@media(max-width:850px){
-    .galeria{
-        gap: 50px;
+@keyframes fromBottom {
+    0% {
+        opacity: 0;
+        transform: translateY(-30px);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateY(0);
     }
 }

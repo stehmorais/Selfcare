@@ -1,0 +1,8 @@
+@mixin text-rodape($display, $just, $items, $padding, $font, $color){
+    display: $display;
+    justify-content: $just;
+    align-items: $items;
+    padding: $padding;
+    font-weight: $font;
+    color: $color;
+}
